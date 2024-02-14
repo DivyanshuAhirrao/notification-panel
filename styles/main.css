@@ -1,0 +1,248 @@
+#ui-container {
+  width: 100%;
+  background: #19222F;
+  transition: all 0.35s ease-in-out;
+  color: #F5DEB3;
+  background-image: url("../media/bg-img.jpg");
+}
+
+#navbar {
+  height: 75px;
+  border-bottom: 2px solid slategray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5%;
+  font-size: 25px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-blend-mode: difference;
+  box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.511);
+}
+
+.nav-side-left {
+  width: 80%;
+}
+
+.nav-side-right {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-icon {
+  position: relative;
+  padding: 10px;
+  font-size: 19.9px;
+}
+.toggle-icon .fa-regular {
+  transition: all 0.1s;
+}
+.toggle-icon:last-child {
+  visibility: hidden;
+}
+
+.animate-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 35px;
+  background-color: #eee;
+  border-radius: 18px;
+  justify-content: end;
+  padding-left: 3.5px;
+  padding-right: 3.5px;
+}
+.animate-box .box-ball {
+  height: 13px;
+  width: 13px;
+  background-color: #19222F;
+  border-radius: 50%;
+}
+
+#cards-container {
+  padding: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+
+.card {
+  height: 310px;
+  width: 260px;
+  border-radius: 10px;
+  background: #bfc901;
+}
+
+.card-img-box {
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+}
+
+.card-img {
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-details {
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 30px;
+}
+
+#user-container {
+  width: 100%;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+#user-box {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(0, 123, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#user-box .user-icon {
+  font-size: 38px;
+}
+
+.user-box-left {
+  padding-left: 5%;
+  display: flex;
+  gap: 10px;
+}
+.user-box-left .user-welacome-name {
+  position: relative;
+  top: 5px;
+  font-size: 20px;
+  font-family: monospace;
+}
+
+.user-box-right {
+  padding-right: 5%;
+  display: flex;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.personalize {
+  text-transform: uppercase;
+  position: relative;
+  bottom: 5px;
+}
+
+.personalize-icon {
+  font-weight: bold;
+}
+
+.user-nav-box {
+  height: 50px;
+  width: 95%;
+  background-color: #F5DEB3;
+  position: relative;
+  left: 2.38%;
+  bottom: 17px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  color: rgb(1, 59, 1);
+  font-size: 24px;
+  gap: 3%;
+}
+.user-nav-box .user-nav-first {
+  display: flex;
+}
+.user-nav-box .user-nav-second {
+  font-size: 20px;
+  display: flex;
+}
+.user-nav-box .user-nav-icon-label {
+  font-size: 16px;
+  padding-left: 10px;
+  position: relative;
+  bottom: 1px;
+  cursor: pointer;
+}
+.user-nav-box .triangle-1 {
+  border-top: 25px solid transparent;
+  border-right: 17px solid #F5DEB3;
+  border-bottom: 25px solid transparent;
+  transform: rotate(90deg);
+  position: relative;
+  right: 7px;
+  bottom: 15.9px;
+}
+
+.components-container {
+  width: 94.5%;
+  padding-bottom: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  position: relative;
+  left: 2.7%;
+}
+
+.user-calender {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 585px;
+  width: 395px;
+  border-radius: 5px;
+  background-color: blue;
+}
+
+.user-component2 {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.user-component2 .user-birthday, .user-component2 .user-welcome {
+  height: 240px;
+  width: 395px;
+  background-color: red;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-component2 .user-welcome {
+  background-color: rgb(0, 255, 136);
+}
+
+.user-component3 {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.user-component3 .user-learning, .user-component3 .user-survey, .user-component3 .user-morelinks, .user-component3 .user-socialmedia {
+  height: 240px;
+  width: 395px;
+  background-color: red;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-component3 .user-survey {
+  background-color: aqua;
+}
+.user-component3 .user-socialmedia {
+  background-color: yellowgreen;
+}/*# sourceMappingURL=main.css.map */

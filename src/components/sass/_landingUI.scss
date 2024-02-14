@@ -1,0 +1,59 @@
+@import "./declare";
+
+#ui-container {
+  width: 100%;
+  background: $primaryColor;
+  transition: all 0.35s ease-in-out;
+  color: $secondaryColor;
+  background-image: url("../media/bg-img.jpg");
+}
+#navbar {
+  height: 75px;
+  border-bottom: 2px solid slategray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5%;
+  font-size: 25px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-blend-mode: difference;
+  box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.511);
+}
+.nav-side-left {
+  width: 80%;
+}
+
+.nav-side-right {
+  width: 20%;
+  @include centered();
+}
+.toggle-icon {
+  position: relative;
+  padding: 10px;
+  font-size: 19.9px;
+  .fa-regular {
+    transition: all 0.1s;
+  }
+  &:last-child {
+    visibility: hidden;
+  }
+}
+
+.animate-box {
+  @include centered();
+  height: 20px;
+  width: 35px;
+  background-color: #eee;
+  border-radius: 18px;
+  justify-content: end;
+  padding-left: 3.5px;
+  padding-right: 3.5px;
+  .box-ball {
+    height: 13px;
+    width: 13px;
+    background-color: $primaryColor;
+    border-radius: 50%;
+  }
+}
