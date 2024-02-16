@@ -2,7 +2,6 @@ import { LuUserCircle } from "react-icons/lu";
 import { SlPencil } from "react-icons/sl";
 import { AiOutlineHome } from "react-icons/ai";
 import { FaChartLine } from "react-icons/fa6";
-import { BiHome } from "react-icons/bi";
 import UserComponents from "./UserComponents";
 
 const SingleUser = () => {

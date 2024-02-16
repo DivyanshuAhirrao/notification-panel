@@ -5,7 +5,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Button from "@mui/material/Button";
 
-const User = () => {
+const Admin = () => {
   return (
     <div className="w-[90%]">
       <Accordion defaultExpanded>
@@ -100,4 +100,4 @@ const User = () => {
     </div>
   );
 };
-export default User;
+export default Admin;

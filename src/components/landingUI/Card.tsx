@@ -11,7 +11,6 @@ const Card = ({ prop, ind }: any) => {
   let [like, setLike] = useState(true);
   let [comment, setComment] = useState(false);
 
-  console.log(prop);
 
   return (
     <div className="card" key={ind}>
