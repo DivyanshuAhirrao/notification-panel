@@ -70,7 +70,7 @@ const Cards = () => {
         return <Card prop={e} ind={i} />;
       })}
 
-      <article className="w-[70%]  m-auto fixed bottom-8 left-[25%] opacity-80">
+      <article className="w-[70%]  m-auto fixed bottom-8 left-[25%] opacity-90">
         <Accordion>
           <AccordionSummary
             expandIcon={<ArrowDownwardIcon />}
@@ -85,7 +85,7 @@ const Cards = () => {
                 value={formats}
                 onChange={handleFormat}
                 aria-label="text formatting"
-                className="scale-[0.8]"
+                className="scale-[0.8] relative right-5 bg-slate-200"
               >
                 <ToggleButton value="bold" aria-label="bold">
                   <FormatBoldIcon />
@@ -102,12 +102,12 @@ const Cards = () => {
                 </ToggleButton>
               </ToggleButtonGroup>
 
-              <Stack spacing={2} alignItems="center" className="scale-[0.9]">
+              <Stack spacing={2} alignItems="center" className="scale-[0.9]  relative left-4 ">
                 <ToggleButtonGroup
                  
                   {...control}
                   aria-label="Small sizes"
-                  className="scale-[0.9]"
+                  className="scale-[0.9] bg-slate-200"
                 >
                   {children}
                 </ToggleButtonGroup>

@@ -5,6 +5,7 @@ import Switch from "@mui/material/Switch";
 import Paper from "@mui/material/Paper";
 import Zoom from "@mui/material/Zoom";
 import FormControlLabel from "@mui/material/FormControlLabel";
+import birth from "../media/Animation - 1708363372216.mp4";
 
 const Birthday = () => {
   const icon1 = (
@@ -33,7 +34,7 @@ const Birthday = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        paddingLeft:5
+        paddingLeft: 5,
       }}
       elevation={0}
     >
@@ -61,7 +62,7 @@ const Birthday = () => {
               control={<Switch checked={checked} onChange={handleChange} />}
               label="lets see Birthday "
             />
-            <Box sx={{ display: "flex" , }}>
+            <Box sx={{ display: "flex" }}>
               <Zoom in={checked}>{icon1}</Zoom>
               <Zoom
                 in={checked}
@@ -71,6 +72,18 @@ const Birthday = () => {
               </Zoom>
             </Box>
           </Box>
+
+          {checked ? (
+            <video
+              src={birth}
+              loop
+              autoPlay
+              className="z-10 relative bottom-44 left-72 opacity-70 rounded-[50%] border-2 border-emerald-400"
+              width={80}
+            ></video>
+          ) : (
+            ""
+          )}
         </article>
       </section>
     </div>

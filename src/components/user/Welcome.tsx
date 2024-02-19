@@ -11,11 +11,11 @@ const Welcome = () => {
             <h1 className='text-[20px]'>Welcome</h1>
             <a href="#" className='text-[blue] text-[16px]'>View More</a>
         </aside>
-        <aside className='w-[100%] h-[80%] text-[15px] flex flex-wrap gap-2 justify-center items-center pl-2'>
-            <div className='h-[70px] w-[140px] border-2 border-emerald-100 flex justify-center items-center text-gray-500 shadow-lg rounded-md'> <GoProjectSymlink className="relative bottom-8 text-[20px]"/> PROJECTS </div>
-            <div className='h-[70px] w-[140px] border-2 border-emerald-100 flex justify-center items-center text-gray-500 shadow-lg rounded-md'> <GiTakeMyMoney className="relative bottom-8 right-2 text-[20px]"/> SALARY </div>
-            <div className='h-[70px] w-[140px] border-2 border-emerald-100 flex justify-center items-center text-gray-500 shadow-lg rounded-md'> <FaHouseLaptop className="relative bottom-8 right-4 text-[20px]"/> PERKS </div>
-            <div className='h-[70px] w-[140px] border-2 border-emerald-100 flex justify-center items-center text-gray-500 shadow-lg rounded-md'> <SiYourtraveldottv className="relative bottom-8 text-[20px]"/> HOLIDAYS</div>
+        <aside className='w-[100%] h-[80%] text-[16px] flex flex-wrap gap-2 justify-center items-center pl-2'>
+            <div className='h-[70px] w-[140px] border-2 border-slate-300 flex justify-center items-center text-gray-500 shadow-lg rounded-md hover:scale-105 transition-all duration-200 cursor-pointer'> <GoProjectSymlink className="relative bottom-8 text-[20px]  "/> PROJECTS </div>
+            <div className='h-[70px] w-[140px] border-2 border-slate-300 flex justify-center items-center text-gray-500 shadow-lg rounded-md hover:scale-105 transition-all duration-200 cursor-pointer'> <GiTakeMyMoney className="relative bottom-8 right-2 text-[24px]"/> SALARY </div>
+            <div className='h-[70px] w-[140px] border-2 border-slate-300 flex justify-center items-center text-gray-500 shadow-lg rounded-md hover:scale-105 transition-all duration-200 cursor-pointer'> <FaHouseLaptop className="relative bottom-8 right-4 text-[24px]"/> PERKS </div>
+            <div className='h-[70px] w-[140px] border-2 border-slate-300 flex justify-center items-center text-gray-500 shadow-lg rounded-md hover:scale-105 transition-all duration-200 cursor-pointer'> <SiYourtraveldottv className="relative bottom-8 text-[22px]"/> HOLIDAYS</div>
         </aside>
     </>
   )
