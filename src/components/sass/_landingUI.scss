@@ -5,10 +5,12 @@
   background: $primaryColor;
   transition: all 0.35s ease-in-out;
   color: $secondaryColor;
-  background-image: url("../media/bg-img.jpg");
+  // background-image: url("../media/bg-img.jpg");
 }
 #navbar {
   height: 75px;
+  // background: linear-gradient(90deg, rgb(167, 162, 234) , rgb(241, 168, 215));
+  background: linear-gradient(90deg, rgb(2, 0, 27), rgba(35, 0, 23, 0.5));
   border-bottom: 2px solid slategray;
   display: flex;
   justify-content: space-between;
@@ -18,9 +20,27 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  background-blend-mode: difference;
   box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.511);
 }
+.notify-bell {
+  color: rgb(197, 196, 196);
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+  filter: drop-shadow(1px 1px 3px rgba(56, 40, 116, 0.7));
+  &:hover {
+    background-color: rgba(128, 128, 128, 0.438);
+    padding: 2px 2px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+}
+.nav-profile {
+  transform: scale(0.75);
+  position: relative;
+  left: 20%;
+}
+
 .nav-side-left {
   width: 80%;
 }
@@ -57,3 +77,11 @@
     border-radius: 50%;
   }
 }
+
+#notify-box {
+  animation: color-changer 5s infinite ;
+  transition: all 0.3s ease;
+  background: linear-gradient(45deg, white,white, rgb(245, 226, 229));
+}
+
+

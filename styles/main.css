@@ -3,11 +3,11 @@
   background: #19222F;
   transition: all 0.35s ease-in-out;
   color: #F5DEB3;
-  background-image: url("../media/bg-img.jpg");
 }
 
 #navbar {
   height: 75px;
+  background: linear-gradient(90deg, rgb(2, 0, 27), rgba(35, 0, 23, 0.5));
   border-bottom: 2px solid slategray;
   display: flex;
   justify-content: space-between;
@@ -17,8 +17,27 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  background-blend-mode: difference;
   box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.511);
+}
+
+.notify-bell {
+  color: rgb(197, 196, 196);
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+  filter: drop-shadow(1px 1px 3px rgba(56, 40, 116, 0.7));
+}
+.notify-bell:hover {
+  background-color: rgba(128, 128, 128, 0.438);
+  padding: 2px 2px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-profile {
+  transform: scale(0.75);
+  position: relative;
+  left: 20%;
 }
 
 .nav-side-left {
@@ -63,8 +82,15 @@
   border-radius: 50%;
 }
 
+#notify-box {
+  animation: color-changer 5s infinite;
+  transition: all 0.3s ease;
+  background: linear-gradient(45deg, white, white, rgb(245, 226, 229));
+}
+
 #cards-container {
-  padding: 100px;
+  width: 80%;
+  padding: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -200,14 +226,17 @@
   font-size: 18px;
 }
 
+.user-component1,
+.user-component2,
+.user-component3 {
+  padding-top: 2%;
+  color: rgb(54, 53, 53);
+}
+
 .user-calender {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 585px;
-  width: 395px;
   border-radius: 5px;
-  background-color: blue;
+  overflow: hidden;
+  color: rgb(30, 56, 75);
 }
 
 .user-component2 {
@@ -217,16 +246,29 @@
 }
 .user-component2 .user-birthday,
 .user-component2 .user-welcome {
-  height: 240px;
+  height: 233px;
   width: 395px;
-  background-color: blue;
+  background: linear-gradient(90deg, white, rgb(244, 250, 237));
   border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .user-component2 .user-welcome {
-  background-color: blue;
+  background: linear-gradient(90deg, white, rgb(243, 228, 238));
+}
+
+#birthday-box {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+#birthday-box section {
+  display: flex;
+  padding-top: 12px;
+}
+#birthday-box section h1 {
+  letter-spacing: 1px;
+}
+#birthday-box section article {
+  font-size: 30px;
 }
 
 .user-component3 {
@@ -238,17 +280,14 @@
 .user-component3 .user-survey,
 .user-component3 .user-morelinks,
 .user-component3 .user-socialmedia {
-  height: 240px;
+  height: 233px;
   width: 395px;
-  background-color: blue;
+  background: linear-gradient(90deg, white, rgb(230, 247, 242));
   border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .user-component3 .user-survey {
-  background-color: blue;
+  background: linear-gradient(90deg, white, rgb(247, 239, 231));
 }
 .user-component3 .user-socialmedia {
-  background-color: blue;
+  background: linear-gradient(90deg, white, rgb(247, 245, 233));
 }/*# sourceMappingURL=main.css.map */

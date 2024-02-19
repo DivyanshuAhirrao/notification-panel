@@ -1,6 +1,6 @@
 import AdminLayout from "./admin/AdminLayout";
-import Login from "./auth/Login";
-import Signup from "./auth/Signup";
+import Login from "./auth/login/Login";
+import Signup from "./auth/signup/SignUp";
 import LandingUI from "./landingUI/LandingUI";
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
@@ -22,13 +22,13 @@ const Layout = () => {
     },
     {
       path: '/signup',
-      element : <Signup />
+      element : <Signup/>
     }
   ])
 
   return (
     <RouterProvider router={router}>
-
+      
     </RouterProvider>
   );
 };

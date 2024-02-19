@@ -1,0 +1,80 @@
+import React from "react";
+import { PiCakeLight } from "react-icons/pi";
+import Box from "@mui/material/Box";
+import Switch from "@mui/material/Switch";
+import Paper from "@mui/material/Paper";
+import Zoom from "@mui/material/Zoom";
+import FormControlLabel from "@mui/material/FormControlLabel";
+
+const Birthday = () => {
+  const icon1 = (
+    <Paper
+      sx={{
+        m: 1,
+        width: 100,
+        height: 100,
+        borderRadius: 50,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+      elevation={4}
+    >
+      <h1>16</h1>
+    </Paper>
+  );
+  const icon2 = (
+    <Paper
+      sx={{
+        m: 1,
+        width: 100,
+        height: 100,
+        borderRadius: 50,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        paddingLeft:5
+      }}
+      elevation={0}
+    >
+      <h1>December</h1>
+    </Paper>
+  );
+  const [checked, setChecked] = React.useState(false);
+
+  const handleChange = () => {
+    setChecked((prev) => !prev);
+  };
+
+  return (
+    <div id="birthday-box">
+      <section className="w-[100%] h-[20%] flex justify-between border-b-2 border-yellow-100">
+        <h1 className="w-[100%] pl-1 text-left">Birthday !!</h1>
+        <article>
+          <PiCakeLight />
+        </article>
+      </section>
+      <section>
+        <article className="birthday-icon">
+          <Box sx={{ height: 180 }}>
+            <FormControlLabel
+              control={<Switch checked={checked} onChange={handleChange} />}
+              label="lets see Birthday "
+            />
+            <Box sx={{ display: "flex" , }}>
+              <Zoom in={checked}>{icon1}</Zoom>
+              <Zoom
+                in={checked}
+                style={{ transitionDelay: checked ? "500ms" : "0ms" }}
+              >
+                {icon2}
+              </Zoom>
+            </Box>
+          </Box>
+        </article>
+      </section>
+    </div>
+  );
+};
+
+export default Birthday;

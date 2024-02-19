@@ -11,7 +11,6 @@ const Card = ({ prop, ind }: any) => {
   let [like, setLike] = useState(true);
   let [comment, setComment] = useState(false);
 
-
   return (
     <div className="card" key={ind}>
       <aside className="card-img-box">

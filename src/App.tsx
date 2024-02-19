@@ -1,11 +1,12 @@
 import Layout from "./components/Layout";
-
+// import GlobalContext from "./components/context/GlobalContext";
 
 const App = () => {
-
   return (
     <>
-      <Layout />
+      {/* <GlobalContext> */}
+        <Layout />
+      {/* </GlobalContext> */}
     </>
   );
 };
