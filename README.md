@@ -1,3 +1,3 @@
 Project Structure : 
 
-Project Name : 
+Project Name : Notification Panel
