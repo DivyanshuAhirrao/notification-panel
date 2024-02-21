@@ -13,8 +13,8 @@
 .card {
   height: 310px;
   width: 260px;
-  border-radius: 10px;
-  background: #f2f2e9;
+  border-radius: 4px;
+  overflow: hidden;
 }
 .card-img-box {
   height: 85%;
@@ -24,12 +24,14 @@
 .card-img {
   height: 100%;
   width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+}
+.card-icon{
+  transform: scale(1.2);
 }
 .card-details {
   height: 15%;
-  @include centered();
-  justify-content: space-around;
+  display: flex;
+  justify-content: space-between;
   font-size: 25px;
+  background: linear-gradient(white ,rgba(0, 0, 0, 0.438));
 }

@@ -10,15 +10,15 @@ const Layout = () => {
   const router = createBrowserRouter([
     {
       path: '/',
-      element : <LandingUI />
+      element : <Login />
     },
     {
       path: '/admin',
       element : <AdminLayout />
     },
     {
-      path: '/login',
-      element : <Login />
+      path: '/user',
+      element : <LandingUI />
     },
     {
       path: '/signup',

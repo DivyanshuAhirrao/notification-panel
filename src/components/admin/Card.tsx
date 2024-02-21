@@ -1,18 +1,22 @@
 import { FaRegHeart } from "react-icons/fa";
 import { FcLike } from "react-icons/fc";
-import { BiCommentDetail } from "react-icons/bi";
+// import { BiCommentDetail } from "react-icons/bi";
 import { useState } from "react";
-import Accordion from "@mui/material/Accordion";
-import AccordionActions from "@mui/material/AccordionActions";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Button from "@mui/material/Button";
+// import Accordion from "@mui/material/Accordion";
+// import AccordionActions from "@mui/material/AccordionActions";
+// import AccordionDetails from "@mui/material/AccordionDetails";
+// import Button from "@mui/material/Button";
+import { PiTagChevron } from "react-icons/pi";
+import { PiTagChevronFill } from "react-icons/pi";
+import { FiSend } from "react-icons/fi";
+import { LiaCommentDots } from "react-icons/lia";
 
 const Card = ({ prop, ind }: any) => {
   let [like, setLike] = useState(true);
-  let [comment, setComment] = useState(false);
+  let [save, setSave] = useState(false);
 
   return (
-    <div className="card" key={ind}>
+    <div className="card shadow-lg shadow-gray-400" key={ind} >
       <aside className="card-img-box">
         <img
           className="card-img"
@@ -21,18 +25,29 @@ const Card = ({ prop, ind }: any) => {
           onDoubleClick={() => setLike(!like)}
         />
       </aside>
-      <aside className="card-details">
-        {like ? (
-          <FaRegHeart className="card-icon" onClick={() => setLike(false)} />
-        ) : (
-          <FcLike className="card-icon" onClick={() => setLike(true)} />
-        )}
+      <aside className="card-details px-4 pt-3">
+        <div className="flex gap-[10px] text-[18.45px]">
+          {like ? (
+            <FaRegHeart className="card-icon" onClick={() => setLike(false)} />
+          ) : (
+            <FcLike className="card-icon" onClick={() => setLike(true)} />
+          )}
 
-        <BiCommentDetail
-          className="card-icon"
-          onClick={() => setComment(!comment)}
-        />
-        {comment ? (
+          <LiaCommentDots />
+          <FiSend />
+        </div>
+        {!save ? (
+          <PiTagChevron
+            className="rotate-90"
+            onClick={() => setSave(!save)}
+          />
+        ) : (
+          <PiTagChevronFill
+            className="rotate-90"
+            onClick={() => setSave(!save)}
+          />
+        )}
+        {/* {comment ? (
           <>
             <Accordion defaultExpanded>
               
@@ -53,7 +68,7 @@ const Card = ({ prop, ind }: any) => {
           </>
         ) : (
           ""
-        )}
+        )} */}
       </aside>
     </div>
   );

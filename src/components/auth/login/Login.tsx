@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UserContextApi } from "../../../context/AuthContext";
 import { UsersContextApi } from "../../../context/UserContext";
 import { FcGoogle } from "react-icons/fc";
@@ -108,6 +108,7 @@ const Login = () => {
                 </button>
               </form>
             </article>
+            <h3 className="text-[17px]"> Not Registered ? <Link to='/signup'> <span className="underline underline-offset-4 text-red-900"> Create an Account </span> </Link></h3>
           </div>
         </div>
       </article>

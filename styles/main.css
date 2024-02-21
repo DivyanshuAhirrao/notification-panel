@@ -94,8 +94,8 @@
 .card {
   height: 310px;
   width: 260px;
-  border-radius: 10px;
-  background: #f2f2e9;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .card-img-box {
@@ -109,17 +109,18 @@
 .card-img {
   height: 100%;
   width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+}
+
+.card-icon {
+  transform: scale(1.2);
 }
 
 .card-details {
   height: 15%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   font-size: 25px;
+  background: linear-gradient(white, rgba(0, 0, 0, 0.438));
 }
 
 #user-container {
@@ -330,12 +331,6 @@
   display: flex;
   flex-wrap: wrap;
 }
-.main-container .carousal-container {
-  flex-basis: 50%;
-  height: 100vh;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.3);
-}
 .main-container .signup-container {
   flex-basis: 50%;
   z-index: 99;
@@ -345,6 +340,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  flex-direction: column;
 }
 .main-container .signup-container .signup-main-container .signup {
   color: #434db8;
