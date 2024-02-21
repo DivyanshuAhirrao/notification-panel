@@ -1,55 +1,49 @@
+import { createContext, useEffect, useReducer } from "react";
+import userReducer, { UsersStateType } from "../reducer/UserReducer";
 import axios from "axios";
-import React, { createContext, useReducer } from "react";
-import authReducer, { AuthState } from "./../reducer/AuthReducer";
-import { PayloadProps } from "../types/PayloadType";
 
-type UserContextProviderProps = {
+type UserCreateType = {
   children: React.ReactNode;
 };
 
-interface ContextValueType {
-  authState: AuthState;
-  signup: (payload: PayloadProps | null) => Promise<void>; // Return type added for consistency
-}
-
-export const UserContextApi = createContext<ContextValueType | null>(null);
-
-const initialState: AuthState = {
-  payload: null,
-  isLoading: true,
+type UserContextValueType = {
+  userData: UsersStateType; //array of user object and isLoading
+  // fetchUsers: () => Promise<void>;
 };
 
-const UserContextProvider = ({ children }: UserContextProviderProps) => {
-  const [auth, dispatch] = useReducer(authReducer, initialState);
-//signup
-  const signup = async (payload: PayloadProps | null): Promise<void> => {
+export const UsersContextApi = createContext<UserContextValueType | null>(null);
+
+const UsersContextProvider = ({ children }: UserCreateType) => {
+  let initialState: UsersStateType = {
+    payload: null,
+    isLoading: true,
+  };
+  const [userState, dispatch] = useReducer(userReducer, initialState);
+
+  // fetch all users
+  const fetchUsers = async () => {
     try {
-      if (payload) {
-        const { data } = await axios.post("http://localhost:5000/users", payload);
-     
-        dispatch({ type: "SIGNUP", payload: data });
-      } else {
-       
-        console.error("Payload is null");
-      }
+      const { data } = await axios.get("http://localhost:5000/users");
+      dispatch({ type: "FETCHALL", payload: data });
     } catch (error) {
-     
-      console.error("Error occurred during signup:", error);
+      console.error("Error fetching users:", error);
     }
   };
 
+  useEffect(() => {
+    fetchUsers();
+  }, []);
 
-
-  const contextValue: ContextValueType = {
-    authState: auth,
-    signup: signup,
+  let contextValue: UserContextValueType = {
+    userData: userState,
+    // fetchUsers:fetchUsers
   };
 
   return (
-    <UserContextApi.Provider value={contextValue}>
+    <UsersContextApi.Provider value={contextValue}>
       {children}
-    </UserContextApi.Provider>
+    </UsersContextApi.Provider>
   );
 };
 
-export default UserContextProvider;
+export default UsersContextProvider;

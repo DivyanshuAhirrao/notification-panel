@@ -1,0 +1,15 @@
+.blinker {
+  animation: color 7s infinite;
+}
+
+@keyframes color {
+  0% {
+    background-color: #03f64018;
+  }
+  50% {
+    background-color: #f0281d1b;
+  }
+  100% {
+    background-color: #db43f918;
+  }
+}

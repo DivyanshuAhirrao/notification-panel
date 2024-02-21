@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 
 const Carousal = () => {
   const [index, setIndex] = useState<number>(0);
-  const interval = 3500; 
+  const interval = 3500;
   useEffect(() => {
     const timer = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex === 2 ? 0 : prevIndex + 1)); 
+      setIndex((prevIndex) => (prevIndex === 2 ? 0 : prevIndex + 1));
     }, interval);
     return () => clearInterval(timer);
   }, []);

@@ -18,7 +18,7 @@ const NotifyBell = () => {
       </Badge>
       {flag ? (
         <>
-          <div id="notify-box" className=" flex flex-col items-center h-[620px] w-[280px] absolute right-0 top-[73px] transition-all duration-500 border-l-2 border-t-2 border-emerald-900">
+          <div id="notify-box" className="z- flex flex-col items-center h-[90vh] w-[350px] absolute right-0 top-[73px] transition-all duration-500 border-l-2 border-t-2 border-emerald-900">
             <div className="h-[80px] flex justify-center items-center w-[80px] bg-gray-500 rounded-[50%] relative top-1">
             <Avatar
             alt="Remy Sharp"
@@ -34,7 +34,7 @@ const NotifyBell = () => {
                 
             </div>
             <div className="h-[1px] w-[100%] bg-gray-700 relative top-4"></div>
-            <section className="w-[90%] h-[440px] rounded-lg bg-[#ffff001e] relative top-6">
+            <section className="w-[90%] h-[435px] rounded-lg bg-[#ffff001e] relative top-6">
             <article className="w-[100%]  relative top-1 pl-2 text-left text-[#000000]">
                 <h1>Notifications : </h1>
             </article>

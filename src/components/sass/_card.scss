@@ -1,7 +1,7 @@
 @import "./declare";
 
 #cards-container {
-  width: 80%;
+  
   padding: 50px;
   display: flex;
   flex-wrap: wrap;
@@ -14,7 +14,7 @@
   height: 310px;
   width: 260px;
   border-radius: 10px;
-  background: #bfc901;
+  background: #f2f2e9;
 }
 .card-img-box {
   height: 85%;
@@ -31,5 +31,5 @@
   height: 15%;
   @include centered();
   justify-content: space-around;
-  font-size: 30px;
+  font-size: 25px;
 }

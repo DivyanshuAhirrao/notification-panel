@@ -45,7 +45,7 @@ const ProjectTrack = () => {
         onChange={(event) => setType(event.target.value as "line" | "bar")}
         label="series type"
         sx={{ minWidth: 150, }}
-        style={{width: "50%", marginLeft: "25%"}}
+        style={{width: "50%", marginLeft: "25%", color: "white"}}
       >
         <MenuItem value="line">line</MenuItem>
         <MenuItem value="bar">bar</MenuItem>

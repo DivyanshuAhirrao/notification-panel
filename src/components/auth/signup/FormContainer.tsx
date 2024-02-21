@@ -1,6 +1,6 @@
 // import SignUp from "./SignUp";
 import Carousal from "../../carousal/Carousal";
-import Signup from "./Signup";
+import Signup from "./SignUp";
 
 const FormContainer = () => {
   return (

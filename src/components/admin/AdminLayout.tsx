@@ -1,15 +1,16 @@
 import "../sass/main.scss";
-import Cards from "../landingUI/Cards";
+import Cards from "./Cards";
 import Navbar from "../navbar/Navbar";
 import AdminSidebar from "./AdminSidebar";
+import AdminContent from "./AdminContent";
 
 const AdminLayout = () => {
   return (
     <>
-      <Navbar />
+      
       <div className="w-[100%] bg-slate-300 flex">
         <AdminSidebar />
-        <Cards />
+        <AdminContent />
       </div>
      
     </>
