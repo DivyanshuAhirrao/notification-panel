@@ -3,6 +3,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import NotifyBell from "./NotifyBell";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const Search = styled("div")(({ theme }) => ({
     position: "relative",
@@ -71,9 +72,11 @@ const Navbar = () => {
             src="https://mui.com/static/images/avatar/2.jpg"
             className="scale-125 border-2 hover:scale-110 cursor-pointer transition-all duration-200 relative right-8"
           />
-          <button className="opacity-85 cursor-pointer px-8 rounded-lg bg-gray-100 text-black hover:text-white hover:border-2 hover:border-emerald-100 hover:bg-gray-900 transition-all duration-200">
+          <Link to='/'>
+          <button className="opacity-85 cursor-pointer px-8 py-2 rounded-lg bg-gray-100 text-black hover:text-white hover:border-2 hover:border-emerald-100 hover:bg-gray-900 transition-all duration-200">
             Logout
           </button>
+          </Link>
         </article>
       </aside>
     </nav>

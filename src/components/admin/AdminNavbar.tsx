@@ -1,9 +1,10 @@
 import Avatar from "@mui/material/Avatar";
 import img from "../media/india.png";
-import SearchIcon from '@mui/icons-material/Search';
-import { styled, alpha } from '@mui/material/styles';
-import InputBase from '@mui/material/InputBase';
-import '@fontsource/roboto/500.css';
+import SearchIcon from "@mui/icons-material/Search";
+import { styled, alpha } from "@mui/material/styles";
+import InputBase from "@mui/material/InputBase";
+import "@fontsource/roboto/500.css";
+import { Link } from "react-router-dom";
 
 const AdminNavbar = () => {
   const Search = styled("div")(({ theme }) => ({
@@ -62,7 +63,6 @@ const AdminNavbar = () => {
             <StyledInputBase
               placeholder="Search Users .."
               inputProps={{ "aria-label": "search" }}
-              
               className="border-2 border-[#5c5e5c28] shadow-sm rounded-lg"
             />
           </Search>
@@ -79,8 +79,12 @@ const AdminNavbar = () => {
           alt=""
           className="scale-[0.6] relative bottom-6 right-4"
         />
-        <button className=" relative bottom-1 opacity-85 cursor-pointer px-8 rounded-lg bg-gray-900 text-white hover:text-black hover:border-2 hover:border-emerald-900 hover:bg-white transition-all du"> Logout </button>
-
+        <Link to="/">
+          <button className="py-2 relative bottom-1 opacity-85 cursor-pointer px-8 rounded-lg bg-gray-900 text-white hover:text-black hover:border-2 hover:border-emerald-900 hover:bg-white transition-all du">
+            {" "}
+            Logout{" "}
+          </button>
+        </Link>
       </article>
     </nav>
   );

@@ -1,7 +1,7 @@
 import AdminLayout from "./admin/AdminLayout";
 import Login from "./auth/login/Login";
 import Signup from "./auth/signup/SignUp";
-import LandingUI from "./landingUI/LandingUI";
+import LandingUI from "./user/LandingUI";
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 

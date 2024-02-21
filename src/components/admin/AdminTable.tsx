@@ -1,4 +1,9 @@
 import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
+import React, { useEffect } from "react";
+// importing aos
+import AOS from 'aos';
+import "aos/dist/aos.css";
+
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 70 },
@@ -34,8 +39,11 @@ const rows = [
 ];
 
 const AdminTable = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div style={{ height: 428, width: "99.2%" }} className="bg-[#494cf023] rounded-[12px] border-2 border-emerald-800 overflow-hidden">
+    <div data-aos="fade-right" style={{ height: 428, width: "99.2%" }} className="bg-[#494cf023] rounded-[12px] border-2 border-emerald-800 overflow-hidden">
       <DataGrid
         rows={rows}
         columns={columns}

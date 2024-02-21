@@ -1,8 +1,79 @@
 {
-    "users" : [
-        {
-            "name" : "John",
-            "age" : "22" 
-        }
-    ]
+  "users": [
+    {
+      "id": "ad01",
+      "firstName": "admin",
+      "lastName": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin@123",
+      "domain": "admin",
+      "imageUrl": "url",
+      "role": "admin"
+    },
+    {
+      "id": "3d32",
+      "firstName": "venkata sujith kumar",
+      "lastName": "petluri",
+      "dateOfBirth": "2001-10-21",
+      "email": "sujithkumarkavali@gmail.com",
+      "password": "sujith123",
+      "domain": "developer",
+      "imageUrl": "sujith",
+      "role": "user",
+      "like": false,
+      "comment": []
+    },
+    {
+      "id": "13eb",
+      "firstName": "krishan",
+      "lastName": "kumar",
+      "dateOfBirth": "2024-02-03",
+      "email": "krishan@gmail.com",
+      "password": "12345",
+      "domain": "developer",
+      "imageUrl": "krishan",
+      "role": "user",
+      "like": false,
+      "comment": []
+    },
+    {
+      "id": "d73e",
+      "firstName": "monika",
+      "lastName": "k",
+      "dateOfBirth": "2024-02-03",
+      "email": "monika@gmail.com",
+      "password": "12345",
+      "domain": "developer",
+      "imageUrl": "monika",
+      "role": "user",
+      "like": false,
+      "comment": []
+    },
+    {
+      "id": "658c",
+      "firstName": "divyanshu",
+      "lastName": "a",
+      "dateOfBirth": "2024-01-31",
+      "email": "divyanshu@gmail.com",
+      "password": "divyanshu123",
+      "domain": "developer",
+      "imageUrl": "image",
+      "role": "user",
+      "like": false,
+      "comment": []
+    },
+    {
+      "id": "464c",
+      "firstName": "Demo",
+      "lastName": "King",
+      "dateOfBirth": "2000-05-10",
+      "email": "demo@gmail.com",
+      "password": "123123123",
+      "domain": "user",
+      "imageUrl": "https://mui.com/static/images/avatar/4.jpg",
+      "role": "user",
+      "like": false,
+      "comment": []
+    }
+  ]
 }

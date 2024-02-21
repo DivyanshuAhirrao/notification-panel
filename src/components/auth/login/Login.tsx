@@ -41,13 +41,16 @@ const Login = () => {
         let role = signIn(authData, users);
         console.log(role, "=========");
         if (role === "admin") {
-          navigate("/dashboard");
+          navigate("/admin");
         } else if (role === "user") {
-          console.log("user");
+          navigate("/user");
         }
       }
     }
   };
+
+
+
   return (
     <section className="main-container">
       <article className="inner-container">

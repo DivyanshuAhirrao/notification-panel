@@ -25,6 +25,7 @@ const UsersContextProvider = ({ children }: UserCreateType) => {
     try {
       const { data } = await axios.get("http://localhost:5000/users");
       dispatch({ type: "FETCHALL", payload: data });
+      
     } catch (error) {
       console.error("Error fetching users:", error);
     }

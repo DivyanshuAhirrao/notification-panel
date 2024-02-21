@@ -334,6 +334,9 @@
 .main-container .signup-container {
   flex-basis: 50%;
   z-index: 99;
+  background-image: url("/public/background.png");
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 .main-container .signup-container .signup-main-container {
   display: flex;
@@ -342,33 +345,33 @@
   height: 100vh;
   flex-direction: column;
 }
-.main-container .signup-container .signup-main-container .signup {
+.main-container .signup-container .signup {
+  font-family: "Times New Roman", Times, serif;
   color: #434db8;
-  position: absolute;
+  position: relative;
   font-size: 2.3em;
   font-weight: 600;
-  top: 10%;
-  left: 70%;
+  text-align: center;
+  bottom: 18px;
+  text-shadow: 2px 2px 1px rgba(128, 128, 128, 0.537);
 }
-.main-container .signup-container .signup-main-container .form-inner-container {
+.main-container .signup-container .form-inner-container {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1.1em;
 }
-.main-container .signup-container .signup-main-container .form-inner-container .inline-container {
+.main-container .signup-container .form-inner-container .inline-container {
   display: flex;
   gap: 1.5em;
 }
-.main-container .signup-container .signup-main-container .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
-  font-size: 0.9em;
-  top: -0.4em;
+.main-container .signup-container .css-kzf2d7-MuiInputBase-root-MuiOutlinedInput-root {
+  font-size: 0.8em;
+  top: 0.3em;
 }
-.main-container .signup-container .signup-main-container #text-line {
+.main-container .signup-container #text-line {
   font: inherit;
   letter-spacing: inherit;
   color: currentColor;
-  padding: 4px 0 5px;
-  border: 0;
   box-sizing: content-box;
   background: none;
   height: 1.4375em;
@@ -376,13 +379,12 @@
   -webkit-tap-highlight-color: transparent;
   display: block;
   width: 29em;
-  padding: 8px 12px;
+  padding: 10px 12px;
 }
-.main-container .signup-container .signup-main-container #text {
+.main-container .signup-container #text {
   font: inherit;
   letter-spacing: inherit;
   color: currentColor;
-  padding: 4px 0 5px;
   border: 0;
   box-sizing: content-box;
   background: none;
@@ -391,15 +393,16 @@
   -webkit-tap-highlight-color: transparent;
   display: block;
   width: 13em;
-  padding: 8px 12px;
+  padding: 10px 12px;
 }
-.main-container .signup-container .signup-main-container .signup-btn {
+.main-container .signup-container .signup-btn {
   width: 50%;
 }
-.main-container .signup-container .signup-main-container input[type=date]:required:invalid::-webkit-datetime-edit {
+.main-container .signup-container input[type=date]:required:invalid::-webkit-datetime-edit {
   color: transparent;
 }
-.main-container .signup-link {
+
+.signup-link {
   margin-left: 23%;
   margin-top: 7%;
 }

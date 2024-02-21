@@ -10,13 +10,25 @@ import { PiTagChevron } from "react-icons/pi";
 import { PiTagChevronFill } from "react-icons/pi";
 import { FiSend } from "react-icons/fi";
 import { LiaCommentDots } from "react-icons/lia";
+import{ useEffect } from "react";
+// importing aos
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Card = ({ prop, ind }: any) => {
   let [like, setLike] = useState(true);
   let [save, setSave] = useState(false);
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <div className="card shadow-lg shadow-gray-400" key={ind} >
+    <div
+    data-aos="zoom-out-up"
+      className="card shadow-lg shadow-gray-400"
+      key={ind}
+    >
       <aside className="card-img-box">
         <img
           className="card-img"
@@ -37,10 +49,7 @@ const Card = ({ prop, ind }: any) => {
           <FiSend />
         </div>
         {!save ? (
-          <PiTagChevron
-            className="rotate-90"
-            onClick={() => setSave(!save)}
-          />
+          <PiTagChevron className="rotate-90" onClick={() => setSave(!save)} />
         ) : (
           <PiTagChevronFill
             className="rotate-90"

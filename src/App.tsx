@@ -1,12 +1,16 @@
 import Layout from "./components/Layout";
+import UserContextProvider from "./context/AuthContext";
+import UsersContextProvider from "./context/UserContext";
 // import GlobalContext from "./components/context/GlobalContext";
 
 const App = () => {
   return (
     <>
-      {/* <GlobalContext> */}
-        <Layout />
-      {/* </GlobalContext> */}
+      <UserContextProvider>
+        <UsersContextProvider>
+          <Layout />
+        </UsersContextProvider>
+      </UserContextProvider>
     </>
   );
 };
