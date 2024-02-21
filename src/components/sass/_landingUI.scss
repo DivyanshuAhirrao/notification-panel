@@ -39,16 +39,14 @@
   transform: scale(0.75);
   position: relative;
   left: 20%;
+  background-color: red;
 }
 
 .nav-side-left {
   width: 80%;
 }
 
-.nav-side-right {
-  width: 20%;
-  @include centered();
-}
+
 .toggle-icon {
   position: relative;
   padding: 10px;

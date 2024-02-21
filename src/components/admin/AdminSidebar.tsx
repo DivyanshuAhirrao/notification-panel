@@ -62,7 +62,7 @@ const AdminSidebar = () => {
           </Sidebar.ItemGroup>
         </Sidebar.Items>
       </Sidebar>
-      <Button className="w-[90%] m-auto relative bottom-[87.9px]">
+      <Button className="w-[90%] m-auto relative bottom-[50.9px]">
          <p className="tracking-normal"> UPGRADE TO PREMIUM </p> <div className="text-[24px] pl-12"><TbPremiumRights /></div>
       </Button>
     </div>

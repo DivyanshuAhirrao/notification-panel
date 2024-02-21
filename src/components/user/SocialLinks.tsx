@@ -16,8 +16,8 @@ const SocialLinks = () => {
           View More
         </a>
       </aside>
-      <aside className="w-[100%] h-[60%] flex j items-center pl-[50px]">
-        <Box sx={{ "& > :not(style)": { m: 1 } }}>
+      <aside className="w-[100%] h-[60%] flex items-center pl-[50px]">
+        <Box sx={{ "& > :not(style)": { m: 1, zIndex:1 } }}>
           <Fab variant="extended" size="small" color="primary">
             <FacebookIcon sx={{ mr: 1 }} />
             FaceBook

@@ -8,9 +8,10 @@ import SvgIcon from "@mui/joy/SvgIcon";
 import Box from "@mui/joy/Box";
 import CardCover from "@mui/joy/CardCover";
 
+
 const UsersBanner = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col">
       <Card variant="solid" color="primary" invertedColors>
         <CardContent orientation="horizontal">
           <CircularProgress size="lg" determinate value={20}>
@@ -47,6 +48,8 @@ const UsersBanner = () => {
 
       <Box
         sx={{
+          transform: 'scaleY(0.95)',
+          
           perspective: "1000px",
           transition: "transform 0.4s",
           "& > div, & > div > div": {

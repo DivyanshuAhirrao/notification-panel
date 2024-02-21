@@ -35,7 +35,7 @@ const rows = [
 
 const AdminTable = () => {
   return (
-    <div style={{ height: 400, width: "99.2%" }} className="bg-[#494cf03b] rounded-[12px] border-2 border-emerald-800 overflow-hidden relative top-4">
+    <div style={{ height: 428, width: "99.2%" }} className="bg-[#494cf023] rounded-[12px] border-2 border-emerald-800 overflow-hidden">
       <DataGrid
         rows={rows}
         columns={columns}

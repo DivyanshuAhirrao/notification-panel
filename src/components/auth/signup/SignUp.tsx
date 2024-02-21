@@ -49,8 +49,7 @@ const Signup = () => {
   return (
     <section className="main-container">
       <article className="inner-container">
-        <div className="w-[50%]">
-          {/* <Carousal /> */}
+        <div className="w-[50%] p-12 relative bottom-2">
           <Lottie animationData={gif}/>
         </div>
         <div className="signup-container">

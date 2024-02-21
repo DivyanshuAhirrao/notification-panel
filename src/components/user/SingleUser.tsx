@@ -8,15 +8,15 @@ const SingleUser = () => {
   return (
     <main id="user-container">
       <section id="user-box">
-        <aside className="user-box-left">
+        <aside className="user-box-left relative bottom-2">
           <LuUserCircle className="user-icon" />
-          <span className="user-welacome-name">
+          <span className="user-welacome-name ">
             Welcome , Divyanshu Ahirrao
           </span>
         </aside>
         <aside className="user-box-right">
           <SlPencil className="personalize-icon" />{" "}
-          <span className="personalize"> Personalize </span>
+          <span className="font-mono text-[20px] relative bottom-1"> Personalize </span>
         </aside>
       </section>
       <div className="user-nav-box">
