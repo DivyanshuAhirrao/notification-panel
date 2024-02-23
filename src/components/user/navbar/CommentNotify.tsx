@@ -13,12 +13,12 @@ const CommentNotify = ({ content }: { content: string })=> {
     
     <div className="w-[100%] py-2 shadow-lg rounded-md flex justify-between text-[16px] border-b-2 ">
       <article className="flex gap-2">
-        <Avatar
+        {/* <Avatar
           alt="Remy Sharp"
           src="https://mui.com/static/images/avatar/2.jpg"
           className="hover:scale-110 cursor-pointer transition-all duration-200"
-        />
-        <span className="pt-2 pl-2 text-teal-800">Admin Commented : {content} </span>
+        /> */}
+        <span className="pt-2 pl-2 text-teal-800"> {content} </span>
       </article>
     </div>
   );

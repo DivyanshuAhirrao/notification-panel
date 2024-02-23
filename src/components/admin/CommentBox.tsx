@@ -44,14 +44,16 @@ const CommentBox: React.FC = e => {
         await axios.patch(`http://localhost:5000/users/${id}`, {
           comment: newNotifications,
         });
+        
       }
-  
+      window.location.reload();
       setNotification("");
       toast.success("Successfully Notification sent !!");
     } catch (error) {
       console.error("Error updating notifications:", error);
       toast.error("Failed to send notification");
     }
+
   };
   
 

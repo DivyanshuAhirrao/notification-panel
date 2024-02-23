@@ -11,13 +11,13 @@
 }
 
 .card {
-  height: 310px;
+  height: 350px;
   width: 260px;
   border-radius: 4px;
   overflow: hidden;
 }
 .card-img-box {
-  height: 85%;
+  height: 75%;
   @include centered();
   font-size: 45px;
 }
@@ -29,8 +29,7 @@
   transform: scale(1.2);
 }
 .card-details {
-  height: 15%;
-  display: flex;
+  height: 25%;
   justify-content: space-between;
   font-size: 25px;
   background: linear-gradient(white ,rgba(0, 0, 0, 0.438));

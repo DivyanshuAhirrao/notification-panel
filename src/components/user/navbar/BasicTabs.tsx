@@ -50,6 +50,8 @@ export default function BasicTabs() {
   const user = useLocation();
 
   const userData = user.state.user;
+  console.log(userData.like);
+  
 
   return (
     <>
@@ -60,24 +62,24 @@ export default function BasicTabs() {
             onChange={handleChange}
             aria-label="basic tabs example"
           >
-            <Tab label="Like" {...a11yProps(0)} />
-            <Tab label="Comment" {...a11yProps(1)} />
+            <Tab label="Comment" {...a11yProps(0)} />
+            <Tab label="Like" {...a11yProps(1)} />
           </Tabs>
         </Box>
         <CustomTabPanel value={value} index={0}>
           <section className="flex flex-col gap-2">
-           {userData.like ? <LikeComponent /> : ""}
-          </section>
-        </CustomTabPanel>
-        <CustomTabPanel value={value} index={1}>
-          <section className="flex flex-col gap-2">
-            {userData.comment.map((e: string, i: number) => (
+          {userData.comment.map((e: string, i: number) => (
               <div key={i}>
                 <div>
                   <CommentNotify content={e} />
                 </div>
               </div>
             ))}
+          </section>
+        </CustomTabPanel>
+        <CustomTabPanel value={value} index={1}>
+          <section className="flex flex-col gap-2">
+           {userData.like ? <LikeComponent /> : ""}
           </section>
         </CustomTabPanel>
       </Box>

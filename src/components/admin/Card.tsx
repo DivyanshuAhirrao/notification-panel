@@ -28,7 +28,7 @@ const Card = ({ prop }: any) => {
     }
 
     try {
-      const { id, like } = prop;
+      const { id, like:boolean } = prop;
 
       // Construct the new notifications array including the new notification
       // const newNotifications = [...comment, notification];
@@ -64,7 +64,13 @@ const Card = ({ prop }: any) => {
           onDoubleClick={likes}
         />
       </aside>
-      <aside className="card-details px-4 pt-3">
+      
+      <aside className="card-details px-4 pt-3 flex flex-col">
+        <div className="">
+          <h2 className="text-[14.2px] ">Name: <span className="font-medium"> {prop.firstName} {prop.lastName} </span></h2>
+
+        </div>
+        <div className="flex justify-between relative bottom-3">
         <div className="flex gap-[10px] text-[18.45px]">
           {liked ? (
             <FaRegHeart className="card-icon" onClick={likes} />
@@ -83,6 +89,7 @@ const Card = ({ prop }: any) => {
             onClick={() => setSave(!save)}
           />
         )}
+        </div>
       </aside>
     </div>
   );

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
 #ui-container {
   width: 100%;
   background: #19222F;
@@ -21,7 +22,7 @@
 }
 
 .notify-bell {
-  color: rgb(197, 196, 196);
+  color: #c5c4c4;
   transform: scale(1.2);
   transition: all 0.3s ease;
   filter: drop-shadow(1px 1px 3px rgba(56, 40, 116, 0.7));
@@ -92,14 +93,14 @@
 }
 
 .card {
-  height: 310px;
+  height: 350px;
   width: 260px;
   border-radius: 4px;
   overflow: hidden;
 }
 
 .card-img-box {
-  height: 85%;
+  height: 75%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,8 +117,7 @@
 }
 
 .card-details {
-  height: 15%;
-  display: flex;
+  height: 25%;
   justify-content: space-between;
   font-size: 25px;
   background: linear-gradient(white, rgba(0, 0, 0, 0.438));
@@ -421,4 +421,61 @@
   100% {
     background-color: rgba(219, 67, 249, 0.0941176471);
   }
+}
+.notfound-container {
+  background-color: #daf3f0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.notfound-container .content {
+  position: relative;
+}
+.notfound-container .content h2 {
+  color: #fff;
+  font-size: 8em;
+  left: 50%;
+  margin-top: 9%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.notfound-container .content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #4a38ec;
+}
+.notfound-container .content h2:nth-child(2) {
+  color: rgba(127, 112, 253, 0.4039215686);
+  animation: animate 4s ease-in-out infinite;
+}
+@keyframes animate {
+  0%, 100% {
+    clip-path: polygon(0% 45%, 16% 44%, 33% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+  }
+  50% {
+    clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+  }
+}
+.notfound-container .container-1 {
+  margin-top: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.notfound-container .container-1 .inner-container-1 h4 {
+  font-family: "Bungee Shade", sans-serif;
+  color: #6890e7;
+  font-size: 2em;
+}
+.notfound-container .container-1 .para-content p {
+  color: #adc3f1;
+  font-size: 1.3em;
+  text-transform: capitalize;
+}
+.notfound-container .container-1 .inner-container-2 .gif {
+  height: 20em;
+  width: 30em;
 }/*# sourceMappingURL=main.css.map */

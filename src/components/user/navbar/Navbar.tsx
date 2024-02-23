@@ -3,8 +3,12 @@ import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import NotifyBell from "./NotifyBell";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
+  
+  const user = useLocation();
+  const userData = user.state.user;
+
   const Search = styled("div")(({ theme }) => ({
     position: "relative",
     borderRadius: theme.shape.borderRadius,
@@ -68,7 +72,7 @@ const Navbar = () => {
         <article className="flex relative left-16 text-[17px]">
           <Avatar
             alt="Remy Sharp"
-            src="https://mui.com/static/images/avatar/2.jpg"
+            src={userData.imageUrl}
             className="scale-125 border-2 hover:scale-110 cursor-pointer transition-all duration-200 relative right-8"
           />
           <Link to="/">

@@ -10,12 +10,7 @@
       "imageUrl": "https://mui.com/static/images/avatar/1.jpg",
       "role": "admin",
       "comment": [
-        "this is notification",
-        "hello",
-        "Checkking...",
-        "Today\n",
-        "1234",
-        "108245624"
+        "this is notification"
       ],
       "like": true
     },
@@ -31,12 +26,7 @@
       "role": "user",
       "like": false,
       "comment": [
-        "this is notification",
-        "hello",
-        "Checkking...",
-        "Today\n",
-        "1234",
-        "108245624"
+        "this is notification"
       ]
     },
     {
@@ -51,12 +41,7 @@
       "role": "user",
       "like": true,
       "comment": [
-        "this is notification",
-        "hello",
-        "Checkking...",
-        "Today\n",
-        "1234",
-        "108245624"
+        "this is notification"
       ]
     },
     {
@@ -69,14 +54,9 @@
       "domain": "developer",
       "imageUrl": "https://mui.com/static/images/avatar/3.jpg",
       "role": "user",
-      "like": false,
+      "like": true,
       "comment": [
-        "this is notification",
-        "hello",
-        "Checkking...",
-        "Today\n",
-        "1234",
-        "108245624"
+        "this is notification"
       ]
     },
     {
@@ -91,12 +71,7 @@
       "role": "user",
       "like": false,
       "comment": [
-        "this is notification",
-        "hello",
-        "Checkking...",
-        "Today\n",
-        "1234",
-        "108245624"
+        "this is notification"
       ]
     },
     {
@@ -111,12 +86,7 @@
       "role": "user",
       "like": false,
       "comment": [
-        "this is notification",
-        "hello",
-        "Checkking...",
-        "Today\n",
-        "1234",
-        "108245624"
+        "this is notification"
       ]
     }
   ]

@@ -1,6 +1,6 @@
 import "../sass/main.scss";
 import SingleUser from "./SingleUser";
-import Navbar from "../navbar/Navbar";
+import Navbar from "./navbar/Navbar";
 // importing aos
 import AOS from "aos";
 import "aos/dist/aos.css";
