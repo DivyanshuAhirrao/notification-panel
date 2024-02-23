@@ -2,12 +2,24 @@ import { Avatar } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
-import NotifyBell from "./NotifyBell";
 import { Link, useLocation } from "react-router-dom";
+import NotifyModal from "./NotifyModal";
+import { useEffect, useState } from "react";
 const Navbar = () => {
-  
+
   const user = useLocation();
   const userData = user.state.user;
+
+  let [liker, setLiker] = useState(false);
+  const[notify, setNotify] = useState(0);
+ 
+  useEffect(() => {
+    setLiker(userData.like);
+    {
+      liker ? setNotify(userData.comment.length+1 ) : setNotify(userData.comment.length);
+    }
+  }, [userData, notify]);
+  
 
   const Search = styled("div")(({ theme }) => ({
     position: "relative",
@@ -68,7 +80,7 @@ const Navbar = () => {
         </div>
       </aside>
       <aside className="w-[20%] flex gap-2">
-        <NotifyBell />
+        <NotifyModal prop={notify}/>
         <article className="flex relative left-16 text-[17px]">
           <Avatar
             alt="Remy Sharp"

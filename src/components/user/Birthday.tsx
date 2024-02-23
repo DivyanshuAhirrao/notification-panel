@@ -9,9 +9,7 @@ import birth from "../media/Animation - 1708363372216.mp4";
 import { useLocation } from "react-router-dom";
 
 const Birthday = () => {
-  const user=useLocation()
-  console.log(user);
-  
+  const user=useLocation();
   const userData=user.state.user
   const birthDate = new Date(userData.dateOfBirth);
   const dayOfMonth = birthDate.getDate();

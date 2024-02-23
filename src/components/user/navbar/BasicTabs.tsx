@@ -6,6 +6,7 @@ import Box from "@mui/material/Box";
 import LikeComponent from "./LikeComponent";
 import { useLocation } from "react-router-dom";
 import CommentNotify from "./CommentNotify";
+import { MdCancel } from "react-icons/md";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -42,16 +43,12 @@ function a11yProps(index: number) {
 
 export default function BasicTabs() {
   const [value, setValue] = React.useState(0);
-
+  const user = useLocation();
+  const userData = user.state.user;
+  
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
-
-  const user = useLocation();
-
-  const userData = user.state.user;
-  console.log(userData.like);
-  
 
   return (
     <>
@@ -68,7 +65,7 @@ export default function BasicTabs() {
         </Box>
         <CustomTabPanel value={value} index={0}>
           <section className="flex flex-col gap-2">
-          {userData.comment.map((e: string, i: number) => (
+            {userData.comment.map((e: string, i: number) => (
               <div key={i}>
                 <div>
                   <CommentNotify content={e} />
@@ -79,7 +76,7 @@ export default function BasicTabs() {
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
           <section className="flex flex-col gap-2">
-           {userData.like ? <LikeComponent /> : ""}
+            {userData.like ? <LikeComponent /> : ""}
           </section>
         </CustomTabPanel>
       </Box>

@@ -57,7 +57,7 @@ const UserContextProvider = ({ children }: UserContextProviderProps) => {
     }
 
     const foundUser = users.find((user) => user.email === email);
-    console.log(foundUser?.role);
+    
     if (!foundUser) {
       toast.error("User with provided email does not exist");
       return false;

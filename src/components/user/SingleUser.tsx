@@ -6,8 +6,7 @@ import UserComponents from "./UserComponents";
 import { useLocation } from "react-router-dom";
 
 const SingleUser = () => {
-  const user=useLocation()
-  console.log(user);
+  const user=useLocation();
   const userData=user.state.user
 
   return (

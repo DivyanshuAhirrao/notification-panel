@@ -10,7 +10,9 @@
       "imageUrl": "https://mui.com/static/images/avatar/1.jpg",
       "role": "admin",
       "comment": [
-        "this is notification"
+        "this is notification",
+        "Commented",
+        "Trial"
       ],
       "like": true
     },
@@ -26,7 +28,25 @@
       "role": "user",
       "like": false,
       "comment": [
-        "this is notification"
+        "this is notification",
+        "Commented",
+        "Trial"
+      ]
+    },
+    {
+      "id": "3d32",
+      "firstName": "venkata sujith kumar",
+      "lastName": "petluri",
+      "dateOfBirth": "2001-10-21",
+      "email": "sujithkumarkavali@gmail.com",
+      "password": "sujith123",
+      "domain": "developer",
+      "imageUrl": "https://mui.com/static/images/avatar/5.jpg",
+      "role": "user",
+      "like": false,
+      "comment": [
+        "this is notification",
+        "Commented"
       ]
     },
     {
@@ -41,7 +61,9 @@
       "role": "user",
       "like": true,
       "comment": [
-        "this is notification"
+        "this is notification",
+        "Commented",
+        "Trial"
       ]
     },
     {
@@ -54,9 +76,11 @@
       "domain": "developer",
       "imageUrl": "https://mui.com/static/images/avatar/3.jpg",
       "role": "user",
-      "like": true,
+      "like": false,
       "comment": [
-        "this is notification"
+        "this is notification",
+        "Commented",
+        "Trial"
       ]
     },
     {
@@ -71,7 +95,9 @@
       "role": "user",
       "like": false,
       "comment": [
-        "this is notification"
+        "this is notification",
+        "Commented",
+        "Trial"
       ]
     },
     {
@@ -86,7 +112,9 @@
       "role": "user",
       "like": false,
       "comment": [
-        "this is notification"
+        "this is notification",
+        "Commented",
+        "Trial"
       ]
     }
   ]

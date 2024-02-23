@@ -68,9 +68,9 @@ const NotifyBell = () => {
               <div className="flex w-[370px]">
                 <p className="w-[25%]">ID : </p> {userData.id}
               </div>
-            </div> */}
-            {/* <div className="h-[1px] w-[100%] bg-gray-700 relative top-4"></div> */}
-            <section className="w-[94%] h-[580px] rounded-lg bg-[#ffff001e] relative top-6">
+            </div>  */}
+             {/* <div className="h-[1px] w-[100%] bg-gray-700 relative top-4"></div> */}
+            <section className="w-[94%] h-[94%] border-2 border-gray-300 shadow-md rounded-lg bg-[#ffff001e] relative top-6">
               <article className="w-[100%] relative top-1 pl-2 text-left text-[#000000]">
                 <h1>Notifications : </h1>
               </article>

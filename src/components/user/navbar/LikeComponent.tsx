@@ -3,7 +3,7 @@ import Avatar from "@mui/material/Avatar";
 
 const LikeComponent = () => {
   return (
-    <div className="w-[100%] py-2 shadow-lg rounded-md flex justify-between text-[16px] border-b-2 ">
+    <div className=" w-[100%] py-2 shadow-lg rounded-md flex justify-between text-[16px] border-b-2 ">
       <article className="flex gap-2">
         <Avatar
           alt="Remy Sharp"
