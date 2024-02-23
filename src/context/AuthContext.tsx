@@ -17,7 +17,7 @@ type SignInType = {
 interface ContextValueType {
   authState: AuthState;
   signup: (payload: PayloadProps | null) => Promise<void>; // Return type added for consistency
-  signIn: (payload: SignInType, users: UsersStateType) => boolean | string;
+  signIn: (payload: SignInType, users: UsersStateType) => boolean | PayloadProps;
 }
 
 export const UserContextApi = createContext<ContextValueType | null>(null);
@@ -71,9 +71,9 @@ const UserContextProvider = ({ children }: UserContextProviderProps) => {
     toast.success("Successfully Logged In!");
     // Dispatch an action to update the authentication state upon successful login
     dispatch({ type: "LOGIN", payload: foundUser });
-    return foundUser.role;
+    return foundUser;
   };
-  console.log(auth, "auth====");
+  // console.log(auth, "auth====");
 
   const contextValue: ContextValueType = {
     authState: auth,

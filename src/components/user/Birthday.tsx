@@ -6,8 +6,22 @@ import Paper from "@mui/material/Paper";
 import Zoom from "@mui/material/Zoom";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import birth from "../media/Animation - 1708363372216.mp4";
+import { useLocation } from "react-router-dom";
 
 const Birthday = () => {
+  const user=useLocation()
+  console.log(user);
+  
+  const userData=user.state.user
+  const birthDate = new Date(userData.dateOfBirth);
+  const dayOfMonth = birthDate.getDate();
+  const monthIndex = birthDate.getMonth();
+  
+  // Array of month names
+  const months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
   const icon1 = (
     <Paper
       sx={{
@@ -21,7 +35,7 @@ const Birthday = () => {
       }}
       elevation={4}
     >
-      <h1>16</h1>
+      <h1>{dayOfMonth}</h1>
     </Paper>
   );
   const icon2 = (
@@ -38,7 +52,7 @@ const Birthday = () => {
       }}
       elevation={0}
     >
-      <h1>December</h1>
+      <h1>{months[monthIndex]}</h1>
     </Paper>
   );
   const [checked, setChecked] = React.useState(false);

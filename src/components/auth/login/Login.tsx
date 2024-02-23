@@ -16,7 +16,7 @@ const Login = () => {
 
   const data = useContext(UsersContextApi);
   const users = data?.userData;
-  console.log(users, "final data======");
+  // console.log(users, "final data======");
 
   type AuthType = {
     email: string;
@@ -38,18 +38,16 @@ const Login = () => {
     e.preventDefault();
     if (signIn) {
       if (users) {
-        let role = signIn(authData, users);
-        console.log(role, "=========");
-        if (role === "admin") {
-          navigate("/admin");
-        } else if (role === "user") {
-          navigate("/user");
+        let user = signIn(authData, users);
+        // console.log(role, "=========");
+        if (user.role === "admin") {
+          navigate("/admin", { state: { user } });
+        } else if (user.role === "user") {
+          navigate("/user", { state: { user } });
         }
       }
     }
   };
-
-
 
   return (
     <section className="main-container">
@@ -111,7 +109,17 @@ const Login = () => {
                 </button>
               </form>
             </article>
-            <h3 className="text-[17px]"> Not Registered ? <Link to='/signup'> <span className="underline underline-offset-4 text-red-900"> Create an Account </span> </Link></h3>
+            <h3 className="text-[17px]">
+              {" "}
+              Not Registered ?{" "}
+              <Link to="/signup">
+                {" "}
+                <span className="underline underline-offset-4 text-red-900">
+                  {" "}
+                  Create an Account{" "}
+                </span>{" "}
+              </Link>
+            </h3>
           </div>
         </div>
       </article>

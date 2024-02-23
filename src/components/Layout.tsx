@@ -1,6 +1,7 @@
 import AdminLayout from "./admin/AdminLayout";
 import Login from "./auth/login/Login";
 import Signup from "./auth/signup/SignUp";
+import PageNotFound from "./pageNotFound/PageNotFound";
 import LandingUI from "./user/LandingUI";
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
@@ -23,7 +24,12 @@ const Layout = () => {
     {
       path: '/signup',
       element : <Signup/>
+    },
+    {
+      path : '*',
+      element : <PageNotFound />
     }
+
   ])
 
   return (

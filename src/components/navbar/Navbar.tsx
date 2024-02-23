@@ -65,17 +65,16 @@ const Navbar = () => {
       </aside>
       <aside className="w-[20%] flex gap-2">
         <NotifyBell />
-
         <article className="flex relative left-16 text-[17px]">
           <Avatar
             alt="Remy Sharp"
             src="https://mui.com/static/images/avatar/2.jpg"
             className="scale-125 border-2 hover:scale-110 cursor-pointer transition-all duration-200 relative right-8"
           />
-          <Link to='/'>
-          <button className="opacity-85 cursor-pointer px-8 py-2 rounded-lg bg-gray-100 text-black hover:text-white hover:border-2 hover:border-emerald-100 hover:bg-gray-900 transition-all duration-200">
-            Logout
-          </button>
+          <Link to="/">
+            <button className="opacity-85 cursor-pointer px-8 py-2 rounded-lg bg-gray-100 text-black hover:text-white hover:border-2 hover:border-emerald-100 hover:bg-gray-900 transition-all duration-200">
+              Logout
+            </button>
           </Link>
         </article>
       </aside>

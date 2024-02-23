@@ -8,5 +8,6 @@ export interface PayloadProps {
     imageUrl: string;
     role:string;
     like:boolean;
-    comment:Array<string>;
+    comment: string[];
+    id?:string
   }

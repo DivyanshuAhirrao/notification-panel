@@ -1,23 +1,50 @@
 import { FaRegHeart } from "react-icons/fa";
 import { FcLike } from "react-icons/fc";
-// import { BiCommentDetail } from "react-icons/bi";
 import { useState } from "react";
-// import Accordion from "@mui/material/Accordion";
-// import AccordionActions from "@mui/material/AccordionActions";
-// import AccordionDetails from "@mui/material/AccordionDetails";
-// import Button from "@mui/material/Button";
 import { PiTagChevron } from "react-icons/pi";
 import { PiTagChevronFill } from "react-icons/pi";
 import { FiSend } from "react-icons/fi";
 import { LiaCommentDots } from "react-icons/lia";
-import{ useEffect } from "react";
+import { useEffect } from "react";
 // importing aos
 import AOS from "aos";
 import "aos/dist/aos.css";
+import axios from "axios";
+import toast from "react-hot-toast";
 
-const Card = ({ prop, ind }: any) => {
-  let [like, setLike] = useState(true);
+const Card = ({ prop }: any) => {
+  let [liked, setLiked] = useState(true);
   let [save, setSave] = useState(false);
+  // const payload = prop?.userData.payload;
+  console.log(prop);
+
+  const likes = async () => {
+    setLiked(!liked);
+    // const newLike = liked;
+
+    if (!prop) {
+      console.error("Payload is empty");
+      return;
+    }
+
+    try {
+      const { id, like } = prop;
+
+      // Construct the new notifications array including the new notification
+      // const newNotifications = [...comment, notification];
+
+      await axios.patch(`http://localhost:5000/users/${id}`, {
+        like: liked,
+      });
+
+      toast.success(`You Liked ${prop.firstName}`);
+    } catch (error) {
+      console.error("Error updating notifications:", error);
+      toast.error("Failed to send notification");
+    }
+  };
+
+  console.log(prop);
 
   useEffect(() => {
     AOS.init();
@@ -25,24 +52,24 @@ const Card = ({ prop, ind }: any) => {
 
   return (
     <div
-    data-aos="zoom-out-up"
+      data-aos="zoom-out-up"
       className="card shadow-lg shadow-gray-400"
-      key={ind}
+      key={prop.id}
     >
       <aside className="card-img-box">
         <img
           className="card-img"
-          src={prop.avatar_url}
-          alt={prop.login}
-          onDoubleClick={() => setLike(!like)}
+          src={prop.imageUrl}
+          alt={prop.id}
+          onDoubleClick={likes}
         />
       </aside>
       <aside className="card-details px-4 pt-3">
         <div className="flex gap-[10px] text-[18.45px]">
-          {like ? (
-            <FaRegHeart className="card-icon" onClick={() => setLike(false)} />
+          {liked ? (
+            <FaRegHeart className="card-icon" onClick={likes} />
           ) : (
-            <FcLike className="card-icon" onClick={() => setLike(true)} />
+            <FcLike className="card-icon" onClick={likes} />
           )}
 
           <LiaCommentDots />
@@ -56,28 +83,6 @@ const Card = ({ prop, ind }: any) => {
             onClick={() => setSave(!save)}
           />
         )}
-        {/* {comment ? (
-          <>
-            <Accordion defaultExpanded>
-              
-              <AccordionDetails>
-                <form>
-                  <textarea
-                    name=""
-                    id=""
-                    placeholder="Type Message here"
-                    className="text-[14px] border-2 border-yellow-500-400 w-[100%]"
-                  ></textarea>
-                </form>
-              </AccordionDetails>
-              <AccordionActions>
-                <Button onClick={()=> setComment(!comment)}>Send</Button>
-              </AccordionActions>
-            </Accordion>
-          </>
-        ) : (
-          ""
-        )} */}
       </aside>
     </div>
   );

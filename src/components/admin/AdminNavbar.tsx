@@ -4,9 +4,14 @@ import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import "@fontsource/roboto/500.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const AdminNavbar = () => {
+  const user = useLocation();
+
+  const userData = user.state.user;
+  
+
   const Search = styled("div")(({ theme }) => ({
     position: "relative",
     borderRadius: theme.shape.borderRadius,
@@ -53,7 +58,11 @@ const AdminNavbar = () => {
     <nav className="bg-[#F9FAFB] w-[100%] h-[11vh] z-10 sticky top-0 flex items-center">
       <article className="w-[75%] flex ">
         <h3 className="text-gray-800 font-mono pt-[12px] pl-7 text-[18px]">
-          Welcome,<span className="text-emerald-500"> Full Name </span>{" "}
+          Welcome,
+          <span className="text-emerald-500">
+            {" "}
+            {userData.firstName} {userData.lastName}{" "}
+          </span>{" "}
         </h3>
         <div className="pl-10">
           <Search>
@@ -81,8 +90,7 @@ const AdminNavbar = () => {
         />
         <Link to="/">
           <button className="py-2 relative bottom-1 opacity-85 cursor-pointer px-8 rounded-lg bg-gray-900 text-white hover:text-black hover:border-2 hover:border-emerald-900 hover:bg-white transition-all du">
-            {" "}
-            Logout{" "}
+            Logout
           </button>
         </Link>
       </article>

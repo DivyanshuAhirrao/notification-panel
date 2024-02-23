@@ -7,8 +7,17 @@
       "email": "admin@gmail.com",
       "password": "admin@123",
       "domain": "admin",
-      "imageUrl": "url",
-      "role": "admin"
+      "imageUrl": "https://mui.com/static/images/avatar/1.jpg",
+      "role": "admin",
+      "comment": [
+        "this is notification",
+        "hello",
+        "Checkking...",
+        "Today\n",
+        "1234",
+        "108245624"
+      ],
+      "like": true
     },
     {
       "id": "3d32",
@@ -18,10 +27,17 @@
       "email": "sujithkumarkavali@gmail.com",
       "password": "sujith123",
       "domain": "developer",
-      "imageUrl": "sujith",
+      "imageUrl": "https://mui.com/static/images/avatar/5.jpg",
       "role": "user",
       "like": false,
-      "comment": []
+      "comment": [
+        "this is notification",
+        "hello",
+        "Checkking...",
+        "Today\n",
+        "1234",
+        "108245624"
+      ]
     },
     {
       "id": "13eb",
@@ -31,10 +47,17 @@
       "email": "krishan@gmail.com",
       "password": "12345",
       "domain": "developer",
-      "imageUrl": "krishan",
+      "imageUrl": "https://mui.com/static/images/avatar/1.jpg",
       "role": "user",
-      "like": false,
-      "comment": []
+      "like": true,
+      "comment": [
+        "this is notification",
+        "hello",
+        "Checkking...",
+        "Today\n",
+        "1234",
+        "108245624"
+      ]
     },
     {
       "id": "d73e",
@@ -44,10 +67,17 @@
       "email": "monika@gmail.com",
       "password": "12345",
       "domain": "developer",
-      "imageUrl": "monika",
+      "imageUrl": "https://mui.com/static/images/avatar/3.jpg",
       "role": "user",
       "like": false,
-      "comment": []
+      "comment": [
+        "this is notification",
+        "hello",
+        "Checkking...",
+        "Today\n",
+        "1234",
+        "108245624"
+      ]
     },
     {
       "id": "658c",
@@ -57,10 +87,17 @@
       "email": "divyanshu@gmail.com",
       "password": "divyanshu123",
       "domain": "developer",
-      "imageUrl": "image",
+      "imageUrl": "https://mui.com/static/images/avatar/2.jpg",
       "role": "user",
       "like": false,
-      "comment": []
+      "comment": [
+        "this is notification",
+        "hello",
+        "Checkking...",
+        "Today\n",
+        "1234",
+        "108245624"
+      ]
     },
     {
       "id": "464c",
@@ -73,7 +110,14 @@
       "imageUrl": "https://mui.com/static/images/avatar/4.jpg",
       "role": "user",
       "like": false,
-      "comment": []
+      "comment": [
+        "this is notification",
+        "hello",
+        "Checkking...",
+        "Today\n",
+        "1234",
+        "108245624"
+      ]
     }
   ]
 }

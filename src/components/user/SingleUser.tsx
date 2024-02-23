@@ -3,15 +3,20 @@ import { SlPencil } from "react-icons/sl";
 import { AiOutlineHome } from "react-icons/ai";
 import { FaChartLine } from "react-icons/fa6";
 import UserComponents from "./UserComponents";
+import { useLocation } from "react-router-dom";
 
 const SingleUser = () => {
+  const user=useLocation()
+  console.log(user);
+  const userData=user.state.user
+
   return (
     <main id="user-container">
       <section id="user-box">
         <aside className="user-box-left relative bottom-2">
           <LuUserCircle className="user-icon" />
           <span className="user-welacome-name ">
-            Welcome , Divyanshu Ahirrao
+            Welcome ,  {userData.firstName} {userData.lastName}
           </span>
         </aside>
         <aside className="user-box-right">
