@@ -6,15 +6,21 @@ Team Name : Innovators United
 Team lead : Vishwanath Koli , Padmakant
 Team Devs : Divyanshu Ahirrao , Venkata Sujith Kumar Petluri, Krishan Kumar, Monika K
 
-Tech Stack : 
+Tech-Stack & Libraries : 
    a) Typescript-React
-   b) Material UI
-   c) Material UI-X
+   b) Material UI , JOY, LAB
+   c) Material UI-X , X-Charts, X-Data-grid, X-Date-picker
    d) Sass
    e) Tailwind CSS
    f) React-Flowbite
    g) React-hot-toast
    h) React-Bootstrap
+   i) React-Lottie Animations
+   j) Axios 
+   k) AOS Animation
+   l) Days JS 
+   
+Backend : json-server   
 
 Work Division : 
 
