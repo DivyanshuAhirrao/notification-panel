@@ -60,7 +60,7 @@ const Card = ({ prop }: any) => {
         <img
           className="card-img"
           src={prop.imageUrl}
-          alt={prop.id}
+          alt={prop.firstName}
           onDoubleClick={likes}
         />
       </aside>
@@ -82,7 +82,10 @@ const Card = ({ prop }: any) => {
           <FiSend />
         </div>
         {!save ? (
+          <>
           <PiTagChevron className="rotate-90" onClick={() => setSave(!save)} />
+          </>
+          
         ) : (
           <PiTagChevronFill
             className="rotate-90"

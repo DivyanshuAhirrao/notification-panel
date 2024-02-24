@@ -407,21 +407,6 @@
   margin-top: 7%;
 }
 
-.blinker {
-  animation: color 7s infinite;
-}
-
-@keyframes color {
-  0% {
-    background-color: rgba(3, 246, 64, 0.0941176471);
-  }
-  50% {
-    background-color: rgba(240, 40, 29, 0.1058823529);
-  }
-  100% {
-    background-color: rgba(219, 67, 249, 0.0941176471);
-  }
-}
 .notfound-container {
   background-color: #daf3f0;
   height: 100vh;

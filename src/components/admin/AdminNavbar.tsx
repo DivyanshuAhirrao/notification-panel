@@ -10,7 +10,6 @@ const AdminNavbar = () => {
   const user = useLocation();
 
   const userData = user.state.user;
-  
 
   const Search = styled("div")(({ theme }) => ({
     position: "relative",
@@ -77,10 +76,10 @@ const AdminNavbar = () => {
           </Search>
         </div>
       </article>
-      <article className="w-[25%] flex justify-end pt-2 pr-2">
+      <article className="w-[25%] flex justify-end pt-2 pr-4">
         <Avatar
           alt="Remy Sharp"
-          src="https://mui.com/static/images/avatar/2.jpg"
+          src={userData.imageUrl}
           className="scale-125 hover:scale-110 cursor-pointer transition-all duration-200"
         />
         <img
@@ -88,8 +87,9 @@ const AdminNavbar = () => {
           alt=""
           className="scale-[0.6] relative bottom-6 right-4"
         />
+
         <Link to="/">
-          <button className="py-2 relative bottom-1 opacity-85 cursor-pointer px-8 rounded-lg bg-gray-900 text-white hover:text-black hover:border-2 hover:border-emerald-900 hover:bg-white transition-all du">
+          <button className="py-2 opacity-85 cursor-pointer px-8 rounded-lg bg-gray-900 text-white hover:text-black hover:border-2 hover:border-emerald-900 hover:bg-white transition-all duration-200">
             Logout
           </button>
         </Link>
